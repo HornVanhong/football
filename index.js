@@ -16,6 +16,12 @@ function loadPage(page) {
         aboutStyle.href = "Page/about.css";
         document.head.appendChild(aboutStyle);
       }
+      if (page === "./Page/home.html") {
+        const homeStyle = document.createElement("link");
+        homeStyle.rel = "stylesheet";
+        homeStyle.href = "Page/home.css";
+        document.head.appendChild(homeStyle);
+      }
     })
     .catch((error) => console.error("Error loading page:", error));
 }
