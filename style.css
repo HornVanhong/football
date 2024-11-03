@@ -4,3 +4,91 @@
   padding: 0;
   font-family: "Titillium Web", sans-serif;
 }
+#footer {
+  background-color: #ffffffd1;
+  width: 100vw;
+  height: auto; /* Adjust to content height */
+  padding: 10px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-more {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  margin-left: 5px;
+  color: black;
+  font-weight: 900;
+}
+.contact-header {
+  margin-left: 10px;
+}
+
+.line {
+  background-color: black;
+  width: 100%;
+  height: 1px;
+}
+
+.row {
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.row,
+h2 {
+  font: 1em sans-serif;
+}
+
+#copy-right {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.Header-grid {
+  font: 1.5rem sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .grid-3 {
+    grid-template-columns: 1fr; /* Change to single column */
+    gap: 15px;
+  }
+
+  #footer {
+    padding: 20px; /* Add padding for mobile */
+  }
+
+  .Header-grid {
+    font-size: 1.2rem; /* Smaller font for headers on mobile */
+  }
+
+  .contact-item {
+    font-size: 0.9rem;
+  }
+
+  .row h2 {
+    font-size: 1rem;
+  }
+
+  #copy-right {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}
