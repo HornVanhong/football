@@ -37,6 +37,15 @@ export function ContactComponent() {
       addFormHandler();
     });
 }
+export function TeamComponent() {
+  loadCSS("team");
+  return fetch("./page/team.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("content-container").innerHTML = html;
+      addFormHandler();
+    });
+}
 
 // Function to handle form submission on the Home page
 function addFormHandler() {
