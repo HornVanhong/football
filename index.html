@@ -3,36 +3,202 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>My Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script type="module" src="index.js"></script>
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="#" onclick="loadContent('././source/Page/contact.html')"
-          >About</a
-        >
-        <a href="contact.html">Contact</a>
+    <!-- <nav>
+      <button id="home-button">Home</button>
+      <button id="about-button">About</button>
+      <button id="contact-button">Contact</button>
+    </nav> -->
+
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand logo" href="#/"> JONG NHAM </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item active">
+                <a class="nav-link" href="#/" id="home-button">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#/about" id="about-button">About</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/menu" data-link>Menu</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/team" data-link>Team</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/gallery" data-link>Gallery</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/blog" data-link>Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/reservation" data-link
+                  >Reservation</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#/contact" id="contact-button"
+                  >Contact</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link icon" href="#/contact" data-link
+                  ><i class="fas fa-search"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link icon" href="#/contact" data-link
+                  ><i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
-    <main>
-      <h1>Welcome to Our Website</h1>
-      <p>This is the home page of our multi-page website.</p>
 
-      <!-- Container to load other page content dynamically -->
-      <div id="content"></div>
-    </main>
-
-    <script>
-      function loadContent(page) {
-        fetch(page)
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById("content").innerHTML = data;
-          })
-          .catch((error) => console.error("Error loading page:", error));
-      }
-    </script>
+    <div id="content-container">
+      <!-- Loaded content will appear here -->
+    </div>
+    <footer id="footer">
+      <div class="grid-3">
+        <div class="grid1">
+          <h1 class="Header-grid">About Resturant</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos,
+            ducimus veniam quisquam assumenda omnis ab officiis amet, ea
+            inventore laboriosam atque architecto, soluta nostrum eos? Error cum
+            molestias corporis totam.
+          </p>
+          <div class="social">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a
+              href="https://www.telegram.org"
+              target="_blank"
+              aria-label="Telegram"
+            >
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gird2">
+          <h1 class="Header-grid">Contact Info</h1>
+          <div class="contact-more">
+            <div class="contact-item">
+              <i class="fa-solid fa-house"></i>
+              <span class="contact-header">TurlKoak, 271, Phnom Penh</span>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:Jongnham@gmail.com" class="contact-header"
+                >Jongnham@gmail.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+855378933" class="contact-header"
+                >+855 - 378 - 933</a
+              >
+            </div>
+            <div class="contact-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <a
+                href="https://wa.me/855378933"
+                target="_blank"
+                class="contact-header"
+                >Jong nham</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="grid3">
+          <h1 class="Header-grid">Open Hours</h1>
+          <div class="time-col">
+            <div class="row">
+              <h2 class="day">Mon-Thu</h2>
+              <h2 class="time">8am - 9pm</h2>
+            </div>
+            <div class="line"></div>
+            <div class="row">
+              <h2 class="day">Fri-Sat</h2>
+              <h2 class="time">8am - 1am</h2>
+            </div>
+            <div class="line"></div>
+            <div class="row">
+              <h2 class="day">Sunday</h2>
+              <h2 class="time">9am - 10pm</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="copy-right">
+        &copy; 2024 Your Company Name. All rights reserved.
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   </body>
 </html>

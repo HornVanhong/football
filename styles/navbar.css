@@ -1,0 +1,39 @@
+header{
+    align-items: center;
+    font-family: "Titillium Web", sans-serif;
+}
+nav{
+    background: #fff;
+}
+
+.nav-link{
+    color: #000; 
+    font-size: 18px;
+    font-weight: 800;
+}
+.logo:hover,
+.nav-link:hover{
+    color: #daa520; 
+
+}
+.logo{
+    color: #000; 
+    font-weight: 800;
+}
+
+.contactbox{
+    background: black;
+    border-radius: 10px;
+    padding: 0 15px ;
+
+   
+}
+.contactbox:hover{
+    background: #daa520;
+
+
+   
+}
+.contactbox a{
+    color: #fff;
+}
