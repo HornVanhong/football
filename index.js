@@ -17,7 +17,12 @@
 //   .getElementById("contact-button")
 //   .addEventListener("click", () => loadComponent(ContactComponent));
 // Import components
-import { HomeComponent, AboutComponent, ContactComponent } from "./components/page.js";
+import {
+  HomeComponent,
+  AboutComponent,
+  ContactComponent,
+  TeamComponent,
+} from "./components/page.js";
 
 // Function to load the selected component
 function loadComponent(component) {
@@ -34,6 +39,9 @@ document
 document
   .getElementById("contact-button")
   .addEventListener("click", () => loadComponent(ContactComponent));
+document
+  .getElementById("team-button")
+  .addEventListener("click", () => loadComponent(TeamComponent));
 
 // Load the homepage by default when the document is ready
 document.addEventListener("DOMContentLoaded", () => {
