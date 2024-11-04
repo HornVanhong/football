@@ -26,6 +26,7 @@ export function AboutComponent() {
     .then((response) => response.text())
     .then((html) => {
       document.getElementById("content-container").innerHTML = html;
+      startCarousel();
     });
 }
 export function ContactComponent() {
@@ -74,4 +75,22 @@ function addFormHandler() {
       form.reset();
     });
   }
+}
+function startCarousel() {
+  let myIndex = 0;
+
+  function carousel() {
+    const slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > slides.length) {
+      myIndex = 1;
+    }
+    slides[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+
+  carousel(); // Start the carousel immediately
 }
