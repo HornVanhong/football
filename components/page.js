@@ -21,6 +21,7 @@ export function HomeComponent() {
 }
 
 export function AboutComponent() {
+  loadCSS("about");
   return fetch("./page/about.html")
     .then((response) => response.text())
     .then((html) => {
