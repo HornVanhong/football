@@ -46,8 +46,18 @@
   }
   .circle,
   .circle-IT {
-    width: 150px; /* Increased size for better visibility on small screens */
-    height: 200px; /* Increased height for better visibility */
+    width: 100%; /* Full width on small screens */
+    height: auto; /* Adjust height for better visibility */
+  }
+  .line-team {
+    width: 100px;
+    height: 2px;
+    background-color: rgb(255, 168, 6);
+  }
+
+  #Team-Member {
+    font-size: 20px; /* Smaller font size for smaller screens */
+    color: rgb(255, 168, 6);
   }
 }
 
@@ -73,7 +83,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 .circle {
-  animation: zoom-animation 3s ease-in-out infinite; /* Moved the animation here for consistency */
+  animation: zoom-animation 3s ease-in-out infinite;
 }
 
 .circle::before {
@@ -122,8 +132,8 @@
 }
 
 .image-chef {
-  width: 150px;
-  height: 150px;
+  width: 100px; /* Smaller profile image on small screens */
+  height: 100px;
   overflow: hidden;
   border-radius: 50%;
   background-color: #006eff;
@@ -135,11 +145,11 @@
 }
 
 .name-staff {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .poiston-staff {
-  font-size: 16px;
+  font-size: 14px;
   animation: colorChange 3s infinite;
 }
 
@@ -168,6 +178,29 @@
   }
   .poiston-staff,
   .name-staff {
-    font-size: 14px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  #Team-Member {
+    font-size: 18px;
+  }
+  .Title-team {
+    font-size: 1rem;
+  }
+  .poiston-staff,
+  .name-staff {
+    font-size: 12px;
+  }
+  .circle,
+  .circle-IT {
+    width: 120px; /* Fit smaller screens */
+    height: auto;
+    padding: 5px;
+  }
+  .line-team {
+    width: 80px; /* Smaller line width */
+    height: 2px;
   }
 }
