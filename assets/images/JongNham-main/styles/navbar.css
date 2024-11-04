@@ -1,0 +1,66 @@
+
+header{
+    align-items: center;
+    font-family: "Titillium Web", sans-serif;
+}
+nav{
+    background: #fff;
+    /* background: linear-gradient(to bottom, #000000ab, #000000a2),
+    url("/assets/images"); */
+}
+.navbar{
+    border-bottom:2px solid #00000014 ;
+}
+.nav-link{
+    color: #000; 
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.logo img{
+    /* opacity: -100px; */
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-link:hover{
+    color: #3b2c08ae; 
+
+}
+.container .logo{
+    
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000; 
+    font-weight: 800;
+  
+}
+.logo .logo-txt{
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+}
+.logo:hover{
+    color: #000; 
+    font-weight: 800;
+}
+
+
+.contactbox{
+    background: black;
+    border-radius: 10px;
+    padding: 0 15px ;
+
+   
+}
+.contactbox:hover{
+    background: #daa520;
+
+
+   
+}
+.contactbox a{
+    color: #fff;
+}
