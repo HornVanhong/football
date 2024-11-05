@@ -21,7 +21,7 @@ export function HomeComponent() {
 }
 
 export function AboutComponent() {
-  loadCSS("about");
+  // loadCSS("about");
   return fetch("./page/about.html")
     .then((response) => response.text())
     .then((html) => {
@@ -39,7 +39,7 @@ export function ContactComponent() {
     });
 }
 export function TeamComponent() {
-  loadCSS("team");
+  // loadCSS("team");
   return fetch("./page/team.html")
     .then((response) => response.text())
     .then((html) => {
